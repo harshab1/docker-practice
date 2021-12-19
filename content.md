@@ -26,6 +26,21 @@ docker exec -it container-id command --> to run commands inside a container, com
 
 docker run -it image-name command-processor --> starting a command-processor immediatly with container
 
+## Docker file:
+
+Three important components: 1. Base Image 2. Run commands to install additional commands,  3. command to run on container start-up
+
+During each step, the image is updated with the instructions/commands from the previous step and the snapshot is passed to next step
+
+docker build . --> builds the image from the Dockerfile
+
+Docker gets its performance by using the cache to build temporary intermediate images
+
+Tagging the image is important to identify a image based on the custom name rather than ID. The fromat is "Docker-ID/project-name:version". Argument "-t". 
+
+
+
+
 
 
 
