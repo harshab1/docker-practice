@@ -38,6 +38,23 @@ Docker gets its performance by using the cache to build temporary intermediate i
 
 Tagging the image is important to identify a image based on the custom name rather than ID. The fromat is "Docker-ID/project-name:version". Argument "-t". 
 
+In the dockerfile the working directory is setup using the command "WORKDIR", this will avoid deleting the files or make unintended changes in the default root directory
+
+docker build -f docker-file-name --> dockerfile with name differnet to default Dockerfile
+
+## Docker compose:
+
+Docker compose will manage multiple images and provide a network infrastructure between the containers
+
+docker run image-name ==> docker-compose up --> start all the containers
+
+docker build . and docker run image-name ==> docker-compose up --build 
+
+docker-compose down --> stop all the containers
+
+Restart policy: If there's a failure in container starting and crashing, restart policy will specify how to deal with it in four possible ways: no (default), always, on-failure and unless-stopped
+
+docker-compose ps --> containers specific to docker-compose file in that directory
 
 
 
